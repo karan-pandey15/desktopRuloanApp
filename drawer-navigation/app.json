@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "drawer-navigation",
+    "slug": "drawer-navigation",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/user.jpeg",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/applogoimg.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff",
+      "height":"50px",
+      "width":"50px"
+      
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/user.jpeg",
+        "backgroundColor": "transparent"
+      }
+    },
+    "web": {
+      "favicon": "./assets/applogoimg.png"
+    }
+  }
+}

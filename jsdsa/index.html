@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jsdsa</title>
+</head>
+<body>
+    
+
+
+    <script>
+        class List{
+            constructor(data){
+                // let size= 0;
+                this.head ={
+                    value:data,
+                    next:null,
+                }
+                this.tail = this.head;
+                this.size = 1;
+            }
+            appendData(nodeData){
+                let elem = {
+                    value:nodeData,
+                    next:null
+                }
+                this.tail.next= elem;
+                this.tail = elem;
+                this.size +=1;
+            }
+            traversing(){
+                let counter= 0;
+                let currentNode = this.head;
+                while(counter<this.size){
+                    console.log(currentNode)
+                    currentNode = currentNode.next;
+                    counter++;
+                }
+            }
+
+            deleteNode(index){
+                let counter = 1;
+                let lead = this.head;
+                if(index==1){
+                    this.head= this.head.next;
+                }
+                else{
+                    while(counter<index-1){
+                        lead= lead.next;
+                        counter++;
+                    }
+                    let nextNode = lead.next.next;
+                    lead.next = nextNode;
+                    // console.log(lead); 
+                }
+            }
+
+
+
+         } 
+         let list = new List(10)
+         list.appendData(20)
+         list.appendData(30)
+         list.appendData(40)
+         list.deleteNode(3);
+          list.traversing();
+        //  console.log(list);
+        //  Traversing in LinkedList;
+
+
+    </script>
+</body>
+</html>  
